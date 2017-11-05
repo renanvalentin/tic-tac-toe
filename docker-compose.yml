@@ -1,0 +1,16 @@
+dev:
+  build: .
+  command: ./tic_tac
+  environment:
+    - MIX_ENV=dev
+    - PORT=3000
+  volumes:
+    - .:/app
+
+test:
+  build: .
+  command: mix test
+  environment:
+    - MIX_ENV=test
+  volumes:
+    - .:/app
